@@ -1,0 +1,25 @@
+<div class="screen">
+    <div class="calc-container">
+        <div class="display-container">
+            <div class="solar-container">
+               <div class="solar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div> 
+            </div>
+            <div class="screen-display">
+                <p [ngStyle]="isWorking ? {'color': 'lightgray'} : {'color': 'black'}">{{numsToDisplay.join(' ')}}</p>
+            </div>
+            <div class="buttons-container">
+                <div class="buttons-grid" *ngFor="let item of items">
+                 <button id={{item}} (click)="doMath(item, $event.target)">{{item}}</button>
+                 </div> 
+             </div>
+        </div>
+    </div>
+</div>
+
+
+
